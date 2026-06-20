@@ -65,4 +65,4 @@ Además de las operaciones básicas, la API ofrece funcionalidades de:
 | `201`  | Recurso creado correctamente.                |
 | `400`  | Parámetros inválidos o solicitud incorrecta. |
 | `404`  | Recurso solicitado no encontrado.            |
-| `500`  | Error interno del servidor.                  |
+
