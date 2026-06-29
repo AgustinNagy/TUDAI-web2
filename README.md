@@ -23,8 +23,8 @@ Además de las operaciones básicas, la API ofrece funcionalidades de:
 | GET    | `localhost/web 2/API/api/servicios?sort=campo&asc=true`                                          | Devuelve la lista de servicios ordenada por el campo indicado. El parámetro `asc=true` indica orden ascendente y `asc=false` orden descendente.               |
 | GET    | `localhost/web 2/API/api/servicios?filter=Modalidad&value=Presencial`                            | Devuelve los servicios filtrados por el campo especificado y por el valor del campo indicado. En este ejemplo, se obtienen los servicios con modalidad presencial. |
 | GET    | `localhost/web 2/API/api/servicios?filter=Modalidad&value=Presencial&sort=id_prestador&asc=true` | Devuelve los servicios filtrados y ordenados. En este ejemplo, se obtienen los servicios presenciales ordenados por `id_prestador` de forma ascendente.       |
-| GET    | `localhost/web 2/API/api/servicios?page=2&limit=2`                                               | Devuelve la segunda página de resultados, mostrando dos servicios por página.                                                                                 |
-| GET    | `localhost/web 2/API/api/servicios?page=2&limit=2&sort=Precio_base&asc=false`                    | Devuelve una página de resultados ordenada por `Precio_base` en forma descendente.                                                                            |
+| GET    | `localhost/web 2/API/api/servicios?offset=2&limit=2`                                               | Devuelve la segunda página de resultados, mostrando dos servicios por página.                                                                                 |
+| GET    | `localhost/web 2/API/api/servicios?offset=2&limit=2&sort=Precio_base&asc=false`                    | Devuelve una página de resultados ordenada por `Precio_base` en forma descendente.                                                                            |
 | DELETE | `localhost/web 2/API/api/servicio/2`                                                             | Elimina el servicio cuyo `id_servicio` es 2. Si el servicio no existe, se devuelve un mensaje de error.                                                       |
 | POST   | `localhost/web 2/API/api/servicio`                                                               | Permite crear un nuevo servicio.                                                                                                                              |
 | PATCH  | `localhost/web 2/API/api/servicio/2`                                                             | Permite modificar parcialmente el servicio cuyo `id_servicio` es 2. Si el servicio no existe, se informa mediante un mensaje de error.                        |
@@ -52,7 +52,7 @@ Además de las operaciones básicas, la API ofrece funcionalidades de:
 
 | Parámetro | Descripción                       |
 | --------- | --------------------------------- |
-| `page`    | Número de página solicitada.      |
+| `offset`    | Número de página solicitada.      |
 | `limit`   | Cantidad de elementos por página. |
 
 ---
